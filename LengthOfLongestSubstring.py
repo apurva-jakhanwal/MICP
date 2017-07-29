@@ -3,6 +3,7 @@ Given a string, find the length of the longest substring without repeating chara
 '''
 class Solution():
     def lengthOfLongestSubstring(self, s):
+        s = s.lower()
         res = ""
         result = []
         for i in range(0, len(s)):
@@ -12,6 +13,7 @@ class Solution():
                 result.append(res)
                 res = ""
                 res += s[i]
+            result.append(res)
         max = 0
         for val in result:
             if len(val) > max:
@@ -21,7 +23,4 @@ class Solution():
 
 if __name__ == '__main__':
     obj = Solution()
-    print(obj.lengthOfLongestSubstring("abcabcbb"))
-    print(obj.lengthOfLongestSubstring("bbbbb"))
-    print(obj.lengthOfLongestSubstring("pwwkew"))
     
