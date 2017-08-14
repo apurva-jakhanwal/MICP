@@ -31,7 +31,8 @@ class TestCases(unittest.TestCase):
         '''Testing unsuccessful sequence'''
         obj = Solution()
         self.assertEqual(obj.wordBreak("salmonenjoyapples", {"pear", "salmon", "foot", "prints", "footprints", "leave", "you", "sun", "girl", "enjoy"}), False)
-
+        self.assertEqual(obj.wordBreak("assomesort", ["some","assort"]), False)
+        
     def test_noWordInDictionary(self):
         '''Testing no word in dictionary'''
         obj = Solution()
